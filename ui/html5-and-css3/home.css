@@ -1,0 +1,17 @@
+body{
+    background-color: navy;
+    color: white;
+}
+li{
+    display: inline;
+    padding: 20px;
+}
+#logout{
+    float: right;
+}
+#home-div{
+    margin-left: 60px;
+}
+li a{
+    color: white;
+}

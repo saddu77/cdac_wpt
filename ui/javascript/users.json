@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123"
+    },
+    {
+      "username": "alex",
+      "password": "alex123",
+      "id": 2
+    },
+    {
+      "username": "bob",
+      "password": "bob123",
+      "id": 3
+    },
+    {
+      "username": "Lilly",
+      "password": "lilly@123",
+      "id": 4
+    },
+    {
+      "username": "rahul",
+      "password": "123456",
+      "id": 5
+    },
+    {
+      "username": "jimmy",
+      "password": "jimmy123",
+      "id": 6
+    },
+    {
+      "username": "julie",
+      "password": "123",
+      "id": 7
+    },
+    {
+      "username": "jack",
+      "password": "123",
+      "id": 8
+    },
+    {
+      "username": "avantika",
+      "password": "123456",
+      "id": 9
+    },
+    {
+      "username": "roshni",
+      "password": "123456",
+      "id": 10
+    },
+    {
+      "username": "kim",
+      "password": "12345",
+      "id": 11
+    },
+    {
+      "username": "mike",
+      "password": "123456",
+      "id": 12
+    }
+  ]
+}

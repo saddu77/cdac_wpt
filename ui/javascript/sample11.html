@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function getDay(){
+        var d = document.getElementById("day").value;
+        switch(parseInt(d)){
+            case 1:
+                    alert("Monday");
+                    break;
+
+            case 2:
+                    alert("Tuesday");
+                    break;
+
+            case 3:
+                    alert("Wednesday");
+                    break;
+
+            case 4:
+                    alert("Thursday");
+                    break;
+
+            case 5:
+                    alert("Friday");
+                    break;
+
+            case 6:
+                    alert("Saturday");
+                    break;
+
+            case 7:
+                    alert("Sunday");
+                    break;
+
+            default:
+                    alert("Enter day between 1 and 7")
+        }
+    }
+</script>
+<body>
+    <h2> Switch Condition</h2>
+    <input type="text" id="day"  /> <br /> <br />
+    <input type="submit" value="get Day" onclick="getDay()" />
+</body>
+</html>

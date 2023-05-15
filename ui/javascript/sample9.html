@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function validate_age(){
+        var age = document.getElementById("age").value;
+        if( parseInt(age) >= 18){
+            alert("Eligible to vote ")
+        }else{
+            alert("Not Eligible to Vote !!! ")
+        }
+    }
+</script>
+<body>
+    <h2> JS Conditions</h2>
+    <input type="text" id="age" /><br /> <br />
+    <input type="submit" value = "validate" onclick="validate_age()" />
+</body>
+</html>

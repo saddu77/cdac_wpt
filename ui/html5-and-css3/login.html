@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./login.css"/>
+</head>
+<script>
+    function validate(){
+        var email = document.getElementById('email').value;
+        var pwd = document.getElementById('pwd').value;
+
+        // alert(email + ' ' + pwd);
+        if(email == "admin" && pwd == "admin123"){
+            //alert("Validate User")
+            window.open("http://127.0.0.1:5500/html5-and-css3/home.html")        
+        }else{
+            alert("Please Verify Credentials!!!")
+        }
+    }
+</script>
+<body>
+    <div id="login-div">
+        <h2> Login </h2>
+        Username: <input type="text" id="email" name="email" /> <br /> <br />
+        Password: <input type="password" id="pwd" name="pwd" /> <br /> <br />
+        <input type="submit" value="Login" onclick="validate()"/> 
+        <button>Cancel</button> <br /> <br />
+        <a href="signup.html">New User?? Sign Up</a>
+    </div>
+   
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function addition(){
+        var num1 = document.getElementById("n1").value;
+        var num2 = document.getElementById("n2").value;
+        // alert(num1 + " " + num2);
+        var sum;
+        sum = parseInt(num1) + parseInt(num2);
+        document.getElementById("res").value = sum;
+    }
+</script>
+<body>
+    <h2> Sample JS </h2>
+    <input type="text" id="n1" /> + 
+    <input type="text" id="n2" /> = 
+    <input type="text" id="res" />
+    <br /> <br />
+    <input type="submit" value="ADD" onclick="addition()" />
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        box-sizing: border-box;
+        width: 100%;
+        border: 100px solid black;
+        float: left;
+        align-content: center;
+        align-items: center;
+    }
+    form{
+        margin: 0 auto;
+        width: 600px;
+    }
+</style>
+<script>
+    function validate_data(){
+        var name = document.forms.RegForm.Name.value;
+        var email = document.forms.RegForm.Email.value;
+        var phone = document.forms.RegForm.Telephone.value;
+        var sub = document.forms.RegForm.Subject;
+        var pwd = document.forms.RegForm.Password.value;
+        var address = document.forms.RegForm.Address.value;
+        //Reg Expression for Email Validation john@gmail.com
+        var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+        var regPhone = /^\d{10}$/;
+        var regName = /\d+$/g;
+        
+        if (name == "" || regName.test(name)){
+            window.alert("Please enter your Name properly.");
+            name.focus();
+            return false;
+        }
+
+        if(address == ""){
+            window.alert("Please enter your address.");
+            address.focus();
+            return false;
+        }   
+        
+        if(email == "" || !regEmail.test(email)){
+            window.alert("Please enter a valid Email address.");
+            address.focus();
+            return false;
+        }
+
+        if(pwd.length < 6){
+            window.alert("Password should be at least 6 char long");
+            address.focus();
+            return false;
+        }
+
+        if(pwd == ""){
+            window.alert("Password should not be blank");
+            pwd.focus();
+            return false;
+        }
+
+        if(phone == " " || !regPhone.test(phone) ){
+            window.alert("Please Enter Valid Phone Number");
+            phone.focus();
+            return false
+        }
+
+       
+        if(sub.selectedIndex == -1){
+            window.alert("Please Enter Your course");
+            sub.focus();
+            return false
+        }
+
+        return true;
+    }
+</script>
+<body>
+    <div>    
+    <h2>REGISTRATION FORM </h2>
+    <form name="RegForm" onsubmit="return validate_data()" method="POST">
+        <p>
+            Name:
+            <input type="text" size="65" name="Name"  />
+         </p>
+         <br />
+         <p>
+            Address:
+            <input type="text" size="65" name="Address" />
+         </p>
+         <br />
+         <p>
+            E-Mail :
+            <input type="text" size="65" name="Email" />
+         </p>
+         <br />
+         <p>
+            Password:
+            <input type="password" size="65" name="Password" />
+         </p>
+         <br/>
+         <p>
+            Telephone:
+            <input type="text" size="65" name="Telephone" />            
+         </p>
+         <br />
+         <p>
+            SELECT YOUR COURSE
+            <select type="text" value="" name="Subject">
+                
+                <option value="-1">BTECH</option>
+                <option>BCA</option>
+                <option>B.COM</option>
+            </select>
+         </p>
+         <p>
+            Comments:
+            <textarea cols="55" name="comment"></textarea>
+         </p>
+         <p>
+            <input type="submit" value="send" name="Submit" />
+            <input type="reset" value="Reset" name="Reset" />
+         </p>
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./home.css"/>
+
+</head>
+<script>
+       async function getUsers(){
+        const resp = await fetch('http://localhost:3000/users');
+        var data = await resp.json();
+        console.log(data);
+        let tab = `<tr> 
+                   <th> ID </th>
+                   <th> UserName </th>
+                   <th> Password </th>                   
+                   </tr>`;
+                   for( let p of data){
+                    tab += `<tr> 
+                            <td>${p.id}</td> 
+                            <td>${p.username}</td>
+                            <td>${p.password}</td>                                                     
+                        </tr>`
+                   }
+                   document.getElementById("users-table").innerHTML = tab;
+    }
+</script>
+<body>
+    <h2> Users :</h2>
+    <button onclick="getUsers()"> List Users </button>
+    <table id="users-table">
+        
+    </table>
+</body>
+</html>
